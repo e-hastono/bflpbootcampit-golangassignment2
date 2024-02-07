@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "298be1ea-f83f-41d6-b9f3-9e13e62bbaab",
+		"name": "Orders and Items",
+		"description": "BFLP Bootcamp IT - Golang Assignment 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14442246"
+	},
+	"item": [
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderedAt\": \"2024-01-31T07:30:00+00:00\",\r\n    \"customerName\": \"Charles Leclerc\",\r\n    \"items\": [\r\n        {\r\n            \"itemCode\": \"321\",\r\n            \"description\": \"Ferrari SF75\",\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"itemCode\": \"322\",\r\n            \"description\": \"Fanatec Gaming Wheel\",\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order Patch",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\": \"Carlos Sainz Jr.\",\r\n    \"items\": [\r\n        {\r\n            \"itemId\": 28,\r\n            \"itemCode\": \"367\",\r\n            \"description\": \"Ferrari SF100\",\r\n            \"quantity\": 4\r\n        },\r\n        {\r\n            \"itemId\": 29,\r\n            \"itemCode\": \"368\",\r\n            \"description\": \"Fanatec Simulator Set\",\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderedAt\": \"2024-01-29T07:30:00+00:00\",\r\n    \"customerName\": \"Carlos Sainz Jr.\",\r\n    \"items\": [\r\n        {\r\n            \"itemCode\": \"321\",\r\n            \"description\": \"Ferrari SF100+\",\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"itemCode\": \"323\",\r\n            \"description\": \"Fanatec Sim Set\",\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/orders/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"orders",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
